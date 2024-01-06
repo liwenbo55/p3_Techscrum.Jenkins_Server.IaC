@@ -46,11 +46,11 @@ jobs:
       - name: Terraform Plan
         run: terraform plan -var-file="test.tfvars" -input=false
   
-      - if: ${{ (github.event.inputs.action == 'deploy' }}
+      - if: ${{ (github.event.inputs.action == 'deploy') }}
         name: Terraform Apply
         run: terraform apply -var-file="test.tfvars" -auto-approve -input=false
 
-      - if: ${{ (github.event.inputs.action == 'destroy' }}
+      - if: ${{ (github.event.inputs.action == 'destroy') }}
         name: Terraform Destroy
         run: terraform destroy -var-file="test.tfvars" -auto-approve -input=false
         
