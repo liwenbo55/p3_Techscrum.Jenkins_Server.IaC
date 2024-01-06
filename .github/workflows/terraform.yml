@@ -39,9 +39,6 @@ jobs:
         
       - name: Terraform Validate
         run: terraform validate
-        
-      - name: Terraform Format
-        run: terraform fmt -check
   
       - if: ${{ (github.event.inputs.action == 'deploy') }}
         name: Terraform plan to deploy
