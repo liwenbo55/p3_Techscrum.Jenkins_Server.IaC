@@ -13,4 +13,4 @@ ami                = "ami-04f5097681773b989"
 instance_type      = "t2.micro"
 
 # Name of the Key Pair to use for the instance. Key pair should be created before run terraform.
-key_name           = "jenkins"
+key_name           = "jenkins-vm"
