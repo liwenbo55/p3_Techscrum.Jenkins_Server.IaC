@@ -13,12 +13,10 @@ variable "ami" {
   type        = string
 }
 
-
 variable "instance_type" {
   description = "Instance type to use for the instance. "
   type        = string
 }
-
 
 variable "key_name" {
   description = "Key name of the Key Pair to use for the instance. Key pair should be created before run terraform."
