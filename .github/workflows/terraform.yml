@@ -52,7 +52,7 @@ jobs:
         run: terraform plan -var-file="jenkins.tfvars" -input=false -destroy
   
       - if: ${{ (github.event.inputs.action == 'deploy') }}
-        name: Terraform Apply
+        name: Terraform Deploy
         run: terraform apply -var-file="jenkins.tfvars" -auto-approve -input=false
 
       - if: ${{ (github.event.inputs.action == 'destroy') }}
